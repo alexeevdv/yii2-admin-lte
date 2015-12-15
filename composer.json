@@ -1,0 +1,28 @@
+{
+    "name": "alexeevdv/yii2-admin-lte",
+    "description": "Yii2 wrappers for AdminLTE",
+    "keywords": ["yii2", "plugin", "adminlte"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/alexeevdv/yii2-admin-lte",
+        "issues": "https://github.com/alexeevdv/yii2-admin-lte/issues"
+    },
+    "authors": [
+        {
+            "name": "alexeevdv",
+            "homepage": "https://alexeevdv.ru/",
+            "email": "mail@alexeevdv.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/admin-lte": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "alexeevdv\\adminlte\\": "src"
+        }
+    }
+}
