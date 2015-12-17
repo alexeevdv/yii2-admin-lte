@@ -18,7 +18,8 @@
     "minimum-stability": "stable",
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/admin-lte": "*"
+        "bower-asset/admin-lte": "*",
+        "2amigos/yii2-ckeditor-widget": "*"
     },
     "autoload": {
         "psr-4": {
