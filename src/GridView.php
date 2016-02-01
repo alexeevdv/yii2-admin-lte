@@ -15,8 +15,7 @@ class GridView extends \yii\grid\GridView
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-5">{summary}</div>
-                    <div class="col-sm-7"><div class="dataTables_paginate">{pager}</div></div>
+                    <div class="col-sm-12"><div class="dataTables_paginate">{pager}</div></div>
                 </div>
             </div>
         </div>
