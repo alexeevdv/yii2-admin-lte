@@ -29,6 +29,10 @@ class ActiveField extends \yii\widgets\ActiveField
                 "external_plugins": {
                     "jbimages": "/js/tinymce/plugins/jbimages/plugin.js",
                 },
+                convert_newlines_to_brs: false,
+                paste_postprocess: function(plugin, args) {
+                    args.node.innerHTML = args.node.innerHTML.replace(/(<p><\/p>)/ig, "").replace(/(<p>&nbsp;<\/p>)/ig, "").replace(/<p><br\/?>\s*<\/p>/ig, "");
+                },    
                 "templates": [],
                 "height": 300,
                 "language": "ru",
