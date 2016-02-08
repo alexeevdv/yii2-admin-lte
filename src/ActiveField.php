@@ -7,11 +7,13 @@ use yii\helpers\Html;
 class ActiveField extends \yii\widgets\ActiveField
 {
 
-    public function ckeditor($options = [])
+    public function tinymce($options = [])
     {
-        $options = array_merge($this->inputOptions, $options);
-        $this->adjustLabelFor($options);
-        $this->parts['{input}'] = Html::activeTextArea($this->model, $this->attribute, $options);
+        $htmlOptions = isset($options['htmlOptions']) ? $options['htmlOptions'] : [];
+
+        $options = array_merge($this->inputOptions, $htmlOptions);
+        $this->adjustLabelFor($htmlOptions);        
+        $this->parts['{input}'] = Html::activeTextArea($this->model, $this->attribute, $htmlOptions);
 
         $id = Html::getInputId($this->model, $this->attribute);
 
@@ -28,6 +30,7 @@ class ActiveField extends \yii\widgets\ActiveField
                 ],
                 "external_plugins": {
                     "jbimages": "/js/tinymce/plugins/jbimages/plugin.js",
+                    "placeholder": "/js/tinymce/plugins/placeholder/plugin.js",
                 },
                 convert_newlines_to_brs: false,
                 paste_postprocess: function(plugin, args) {
